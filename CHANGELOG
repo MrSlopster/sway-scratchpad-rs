@@ -1,0 +1,17 @@
+Version 3.0.0 (2026-10-07)
+==========================
+
+Rewritten in Rust; speaks sway/i3 IPC directly.
+
+- Fixed the focused window being sent to the scratchpad instead of the launched app:
+  subscribe to window events before launching, only accept `new` windows, identify the
+  window by process ancestry, and mark that exact container
+- Fallback for single-instance apps that open their window from an existing process
+- New --app-id / --class options to identify the window explicitly
+- New --timeout option (default raised from 2 s to 5 s)
+- Concurrent invocations for the same command no longer launch duplicate instances
+- Slide animations and -s now use absolute coordinates, fixing multi-monitor placement
+- -w now takes its argument as documented
+- Same flags and window marks as 2.x: existing bindings and windows keep working
+
+Versions up to 2.2: see https://github.com/emilyyyylime/sway-scratchpad

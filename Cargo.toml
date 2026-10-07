@@ -1,0 +1,22 @@
+[package]
+name = "sway-scratchpad"
+version = "3.0.0"
+edition = "2024"
+rust-version = "1.89"
+description = "Toggleable, positioned scratchpad windows for sway and i3"
+license = "GPL-3.0-or-later"
+
+[[bin]]
+name = "sway-scratchpad"
+path = "src/main.rs"
+
+[dependencies]
+anyhow = "1"
+clap = { version = "4", features = ["derive"] }
+md-5 = "0.11"
+rustix = { version = "1", features = ["process"] }
+swayipc = "4"
+
+[profile.release]
+lto = true
+strip = true
