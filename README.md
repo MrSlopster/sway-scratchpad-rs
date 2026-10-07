@@ -1,4 +1,4 @@
-sway-scratchpad (Rust)
+sway-scratchpad-rs
 ======================
 
 A Rust rewrite of [emilyyyylime/sway-scratchpad](https://github.com/emilyyyylime/sway-scratchpad):
@@ -29,10 +29,6 @@ sway-scratchpad [-a <anchor>] [-d <size>] [-p <pos>] [-s <screen>] [-m <edge>] [
  --app-id <id>      Only accept a window with this app_id (Wayland).
  --class <class>    Only accept a window with this X11 class.
 ```
-
-Options bundle like `getopts` (`-tmt -atc`) and parsing stops at the first non-option, so
-`sway-scratchpad -t kitty -o opacity=0.7` works. The command's arguments are joined with spaces and
-run with `sh -c`.
 
 Examples
 --------
